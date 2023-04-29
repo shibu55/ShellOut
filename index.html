@@ -19,24 +19,9 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
         <script type="text/javascript" src="./js/main.js"></script>
-        <!-- Google Tag Manager -->
-          <script>(function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-P64T2ZL');</script>
-        <!-- End Google Tag Manager -->
       </head>
 
-      <body>
-        <!-- Google Tag Manager (noscript) -->
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P64T2ZL"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-    
+      <body>    
         <header>
           <img class="header-logo" src="./img/logo-small.png" alt="">
           <ul class="footer-list">
@@ -54,11 +39,7 @@
         <!-- 最初のローディング -->
         <div class="loading">
           <div class="loading-animation"> <img src="./img/logo-small.png" alt="ロゴ"> </div>
-        </div>
-
-
-        <!-- <div class="close-area"></div> -->
-    
+        </div>    
         <div class="wrap">
     
           <div class="content" style="">
@@ -71,7 +52,7 @@
                 </div>
               </div>
               <h1 class="logo-wrap">
-                <img class="logo" src="./img/hiyoko_logo_w_trans.png" alt="">
+                <img class="logo" src="./img/logo.png" alt="">
               </h1>
               <ul class="list">
                 <li class="list-item menu-company link-underline">COMPANY</li>
@@ -81,7 +62,7 @@
               </ul>
             </div>
     
-            <div class="company" style="display: none;">
+            <div class="company">
               <div class="return-top close">
                 ×
               </div>
@@ -118,7 +99,7 @@
               </table>
             </div>
     
-            <div class="service" style="display: none;">
+            <div class="service">
               <div class="return-top close">
                 ×
               </div>
@@ -147,7 +128,7 @@
               </div>
             </div>
     
-            <div class="recruit" style="display: none;">
+            <div class="recruit">
               <div class="return-top close">
                 ×
               </div>
@@ -165,43 +146,21 @@
               </div>
             </div>
     
-            <div class="contact" style="display: none;">
+            <div class="contact" style="display: block;">
               <div class="return-top close">
                 ×
               </div>
               <h1 class="title">
                 CONTACT
               </h1>
-              <!-- <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJ2tW-siUvbnY-q9OJW8XVS4Y-_FkLSNAycN2ipTCHyvHajA/formResponse">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">お名前</label>
-                    <input type="name" name="entry.2005620554"  class="form-control" id="exampleInputEmail1" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                      <label for="exampleInputEmail1">メールアドレス</label>
-                      <input type="email" name="entry.1045781291"  class="form-control" id="exampleInputEmail1" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">電話番号</label>
-                  <input type="email" name="entry.1166974658"  class="form-control" id="exampleInputEmail1" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">会社名</label>
-                  <input type="email" name="entry.1381314709"  class="form-control" id="exampleInputEmail1" placeholder="Email" required>
-                </div>
-                <label for="exampleInputEmail1">お問い合わせ内容</label>
-                <textarea name="entry.839337160" class="form-control" rows="3" required></textarea><br>
-                <button type="submit" class="btn btn-primary">送信</button>
-              </form> -->
-
-              <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJ2tW-siUvbnY-q9OJW8XVS4Y-_FkLSNAycN2ipTCHyvHajA/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
+              <form method="post" onsubmit="return submitCheck();">
                 <table class="table">
                   <tbody><tr class="table-row">
                     <td class="table-item">
                       <label class="contact-name" for="contact-name-form">お名前</label>
                     </td>
                     <td class="table-content">
-                      <input id="contact-name-form" type="text" name="entry.2005620554" placeholder="必須" value="" data-name="name" required="">
+                      <input id="contact-name-form" type="text" name="name" placeholder="必須" value="" data-name="name" required="">
                     </td>
                   </tr>
                   <tr class="table-row">
@@ -209,7 +168,7 @@
                       <label class="contact-email" for="contact-email-form">メールアドレス</label>
                     </td>
                     <td class="table-content">
-                      <input id="contact-email-form" type="email" name="entry.1045781291" placeholder="必須" value="" data-name="email" maxlength="250" required="">
+                      <input id="contact-email-form" type="email" name="email" placeholder="必須" value="" data-name="email" maxlength="250" required="">
                     </td>
                   </tr>
                   <tr class="table-row">
@@ -217,7 +176,7 @@
                       <label class="contact-tel" for="contact-tel-form">電話番号</label>
                     </td>
                     <td class="table-content">
-                      <input id="contact-tel-form" type="tel" name="entry.1166974658" placeholder="必須" value="" data-name="tel" maxlength="20" required="">
+                      <input id="contact-tel-form" type="tel" name="tel" placeholder="必須" value="" data-name="tel" maxlength="20" required="">
                     </td>
                   </tr>
                   <tr class="table-row">
@@ -225,7 +184,7 @@
                       <label class="contact-corporate" for="contact-corporate-form">会社名</label>
                     </td>
                     <td class="table-content">
-                      <input id="contact-corporate-form" type="text" name="entry.1381314709" value="" data-name="company" maxlength="200">
+                      <input id="contact-corporate-form" type="text" name="company" value="" data-name="company" maxlength="200">
                     </td>
                   </tr>
                   <tr class="table-row">
@@ -233,7 +192,7 @@
                       <label for="contact-inquiry-form">ご用件</label>
                     </td>
                     <td class="table-content">
-                      <textarea id="contact-inquiry-form" name="entry.839337160" rows="" cols="" placeholder="必須" value="" data-name="inquiry" maxlength="10000" required=""></textarea>
+                      <textarea id="contact-inquiry-form" name="body" rows="" cols="" placeholder="必須" value="" data-name="inquiry" maxlength="10000" required=""></textarea>
                     </td>
                   </tr>
                 </tbody></table>
@@ -242,7 +201,7 @@
                   <button class="send-button confirm-button" type="submit">確認</button>
                 </div>
     
-                <div class="contact-confirm-dialog" style="display: none;">
+                <div class="contact-confirm-dialog">
                   <div class="contact-confirm-dialog-content">
                     <p class="contact-form-title">以下の内容で送信します。</p>
                     <table class="table contact-confirm-table">
@@ -272,11 +231,7 @@
                     </div>
                   </div>
                 </div>
-                <script type="text/javascript">
-                  var submitted = false;
-                </script>
-        
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='index.html';}"></iframe>
+    
               </form>
             </div>
     
@@ -288,10 +243,7 @@
           <canvas id="waveCanvas"></canvas>
           <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-14/js/5-14.js"></script>
           <script src="./js/wave.js"></script>
-    
-          <p class="copyright">
-            Copyright © test.Inc. All Rights Reserved.
-          </p>
+
           <p class="privacy">
             プライバシーポリシー
           </p>
