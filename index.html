@@ -15,8 +15,10 @@
         <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width:480px)">
-        <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-P64T2ZL"></script><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="./js/fullsailing.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
         <!-- Google Tag Manager -->
           <script>(function(w,d,s,l,i){
             w[l]=w[l]||[];
@@ -152,48 +154,7 @@
               <h1 class="title">
                 RECRUIT
               </h1>
-    
-              <!-- <table class="table">
-                <tr class="table-row">
-                  <td class="table-item">募集職種</td>
-                  <td class="table-content">エンジニア<br>総務</td>
-                </tr>
-                <tr class="table-row">
-                  <td class="table-item">歓迎する人物像</td>
-                  <td class="table-content">向上心のある人<br>思いやりを持っている人<br>ベンチャー企業で頑張りたい人</td>
-                </tr>
-                <tr class="table-row">
-                  <td class="table-item">給与</td>
-                  <td class="table-content">経験・スキルに応じて決定</td>
-                </tr>
-                <tr class="table-row">
-                  <td class="table-item">昇給・昇格</td>
-                  <td class="table-content">随時</td>
-                </tr>
-                <tr class="table-row">
-                  <td class="table-item">勤務地</td>
-                  <td class="table-content">各自宅 / 東京都内 / 都内近郊</td>
-                </tr>
-                <tr class="table-row">
-                  <td class="table-item">勤務時間</td>
-                  <td class="table-content">10:00-19:00(業務内容により変動)</td>
-                </tr>
-                <tr class="table-row">
-                  <td class="table-item">休日休暇</td>
-                  <td class="table-content">完全週休2日制(土・日) / 祝<br>年始年末休暇、夏季休暇</td>
-                </tr>
-                <tr class="table-row">
-                  <td class="table-item">待遇・福利厚生</td>
-                  <td class="table-content">社会保険完備<br>定期健康診断<br>書籍代</td>
-                </tr>
-                <tr class="table-row">
-                  <td class="table-item">応募方法</td>
-                  <td class="table-content">
-                    <span class="recruit-contact menu-contact">CONTACT</span>よりお問い合わせください
-                  </td>
-                </tr>
-              </table> -->
-    
+               
               <div class="non-recruit-description">
                 弊社にご関心をお寄せ頂き、誠にありがとうございます。
                 <br>
@@ -322,27 +283,11 @@
           </div>
     
         </div>
-    
+        
         <footer>
-          <!-- <div class="wave wave-top"></div>
-          <div class="wave wave-bottom"></div> -->
-    
-          <!-- <ul class="footer-list">
-            <div class="footer-list-enclosure1">
-              <li class="footer-list-item menu-company"><a class="link-underline">COMPANY</a></li>
-              <li class="footer-list-item menu-service"><a class="link-underline">SERVICE</a></li>
-            </div>
-            <div class="footer-list-enclosure2">
-              <li class="footer-list-item menu-recruit"><a class="link-underline">RECRUIT</a></li>
-              <li class="footer-list-item menu-contact"><a class="link-underline">CONTACT</a></li>
-            </div>
-          </ul> -->
-          <div id="wrapper">
-            <div class="wave">
-            <canvas id="waveCanvas"></canvas>
-            </div>
-          </div>
+          <canvas id="waveCanvas"></canvas>
           <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-14/js/5-14.js"></script>
+          <script src="./js/wave.js"></script>
     
           <p class="copyright">
             Copyright © test.Inc. All Rights Reserved.
@@ -351,10 +296,6 @@
             プライバシーポリシー
           </p>
         </footer>
-    
-      
-    
-    
-    
+        <div id="pageTransition"></div>
     </body>
 </html>
