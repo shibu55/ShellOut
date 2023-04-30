@@ -19,7 +19,7 @@ $(document).ready(function() {
       length: 0.005,
       amplitude: 30,
       frequency: 0.05,
-      color: "rgba(255,248,46, 1)"
+      color: "rgba(255,248,46, 0.5)"
     },
     {
       // orange
@@ -27,7 +27,7 @@ $(document).ready(function() {
       length: 0.007,
       amplitude: 25,
       frequency: 0.1,
-      color: "rgba(255,157,46, 1)"
+      color: "rgba(255,157,46, 0.5)"
     }
   ];
 
