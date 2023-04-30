@@ -12,11 +12,10 @@ $(document).ready(function() {
   
   ctx.scale(devicePixelRatio, devicePixelRatio);
 
-  console.log(canvas.height)
   const waves = [
     {
       // yellow
-      y: canvas.height * 0.45,
+      y: canvas.height * 0.5 - 60,
       length: 0.01,
       amplitude: 30,
       frequency: 0.05,
@@ -24,7 +23,7 @@ $(document).ready(function() {
     },
     {
       // orange
-      y: canvas.height * 0.43,
+      y: canvas.height * 0.5 - 50,
       length: 0.015,
       amplitude: 25,
       frequency: 0.1,
