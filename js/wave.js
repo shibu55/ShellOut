@@ -1,25 +1,33 @@
 $(document).ready(function() {
   const canvas = document.getElementById("waveCanvas");
   const ctx = canvas.getContext("2d");
-
+  
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  
+  canvas.style.width = window.innerWidth + "px";
+  canvas.style.height = window.innerHeight + "px";
+  
+  ctx.scale(devicePixelRatio, devicePixelRatio);
 
+  console.log(canvas.height)
   const waves = [
     {
       // yellow
-      y: canvas.height - 65,
+      y: canvas.height * 0.45,
       length: 0.01,
       amplitude: 30,
-      frequency: 0.01,
+      frequency: 0.05,
       color: "rgba(255,248,46, 1)"
     },
     {
       // orange
-      y: canvas.height - 75,
+      y: canvas.height * 0.43,
       length: 0.015,
       amplitude: 25,
-      frequency: 0.015,
+      frequency: 0.1,
       color: "rgba(255,157,46, 1)"
     }
   ];
