@@ -111,22 +111,22 @@ $(function () {
 
 $(function () {
   async function webStorage() {
-    if (sessionStorage.getItem('access')) {
-      $(".loading").addClass('is-active');
+    // if (sessionStorage.getItem('access')) {
+    //   $(".loading").addClass('is-active');
       await fadeInOutPhilosophy();
-    } else {
-      sessionStorage.setItem('access', 'true');
-      $(".loading-animation").addClass('is-active');
-      await delay(3000);
-      $(".loading").addClass('is-active');
-      $(".loading-animation").removeClass('is-active');
-      await fadeInOutPhilosophy();
-    }
+    // } else {
+      // sessionStorage.setItem('access', 'true');
+      // $(".loading-animation").addClass('is-active');
+      // await delay(3000);
+      // $(".loading").addClass('is-active');
+      // $(".loading-animation").removeClass('is-active');
+    //   await fadeInOutPhilosophy();
+    // }
   }
 
-  function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+  // function delay(ms) {
+  //   return new Promise(resolve => setTimeout(resolve, ms));
+  // }
 
   function fadeInOutPhilosophy() {
     return new Promise(resolve => {
