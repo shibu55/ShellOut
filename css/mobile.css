@@ -40,16 +40,16 @@
   }
   
   .corporate-philosophy {
-    color: black;
+    color: #683a1b;
     text-align: center;
   }
   
   .philosophy-h {
     display: none;
     font-family: serif;
-    font-size: 20px;
+    font-size: 1.4rem;
     position: absolute;
-    top: 27%;
+    top: 13%;
     left: 0;
     right: 0;
   }
@@ -57,9 +57,9 @@
   .philosophy-p {
     display: none;
     font-family: serif;
-    font-size: 20px;
+    font-size: 1.4rem;
     position: absolute;
-    top: 34%;
+    top: 18%;
     left: 0;
     right: 0;
   }
@@ -68,7 +68,7 @@
     margin: auto;
     width: 80%;
     position: absolute;
-    top: 30%;
+    top: 15%;
     left: 0;
     right: 0;
   }
