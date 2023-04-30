@@ -142,6 +142,6 @@ $(function () {
       });
     });
   }
-
+  $(".contact-confirm-dialog").hide();
   webStorage();
 });
