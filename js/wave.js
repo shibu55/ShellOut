@@ -7,18 +7,20 @@ $(document).ready(function() {
 
   const waves = [
     {
+      // yellow
       y: canvas.height - 65,
       length: 0.01,
       amplitude: 30,
       frequency: 0.01,
-      color: "rgba(255, 0, 0, 0.2)"
+      color: "rgba(255,248,46, 1)"
     },
     {
+      // orange
       y: canvas.height - 75,
       length: 0.015,
       amplitude: 25,
       frequency: 0.015,
-      color: "rgba(0, 0, 255, 0.2)"
+      color: "rgba(255,157,46, 1)"
     }
   ];
 
@@ -35,7 +37,7 @@ $(document).ready(function() {
     }
 
     ctx.strokeStyle = wave.color;
-    ctx.lineWidth = 5;
+    ctx.lineWidth = 1;
     ctx.stroke();
   }
 
