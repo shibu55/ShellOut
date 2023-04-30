@@ -16,7 +16,7 @@ $(document).ready(function() {
     {
       // yellow
       y: canvas.height * 0.5 - 60,
-      length: 0.01,
+      length: 0.005,
       amplitude: 30,
       frequency: 0.05,
       color: "rgba(255,248,46, 1)"
@@ -24,7 +24,7 @@ $(document).ready(function() {
     {
       // orange
       y: canvas.height * 0.5 - 50,
-      length: 0.015,
+      length: 0.007,
       amplitude: 25,
       frequency: 0.1,
       color: "rgba(255,157,46, 1)"
@@ -37,7 +37,7 @@ $(document).ready(function() {
     ctx.beginPath();
     ctx.moveTo(0, wave.y);
 
-    for (let x = 0; x < canvas.width; x++) {
+    for (let x = 0; x < canvas.width; x+=0.5) {
       const y =
         wave.amplitude * Math.sin(x * wave.length + wave.frequency) + wave.y;
       ctx.lineTo(x, y);
