@@ -56,7 +56,8 @@ $(function () {
 
   window.submitCheck = function () {
     if ($(".contact-confirm-dialog").is(":visible")) {
-      return true;
+      $(".contact-confirm-dialog").fadeOut(FADE_DURATION);
+      $("form[name='contact-form']").submit();
     } else {
       $('[data-confirm-name="name"]').text($('[data-name="name"]').val());
       $('[data-confirm-name="email"]').text($('[data-name="email"]').val());
@@ -66,7 +67,6 @@ $(function () {
         $('[data-name="inquiry"]').val().replace(/\r?\n/g, "<br>")
       );
       $(".contact-confirm-dialog").fadeIn(FADE_DURATION);
-      return false;
     }
   };
 
