@@ -695,6 +695,9 @@ footer {
   opacity: 0;
   visibility: hidden;
 }
+.loading-image {
+  width: 80vw;
+}
 
 .loading-animation.is-active {
   opacity: 1;

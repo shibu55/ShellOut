@@ -26,17 +26,6 @@ $(function () {
     }, duration);
   }
 
-  function fadeInOutPhilosophy() {
-    $(".philosophy-h").fadeIn(2000, function () {
-      $(".philosophy-p").fadeIn(2000, function () {
-        $(".corporate-philosophy").fadeOut(2000, function () {
-          $(".logo-wrap").css("display", "block");
-          $(".logo-wrap").animate({ opacity: 1 }, 2000);
-        });
-      });
-    });
-  }
-
   function navigate(name, fromBrowser = false, initial = false) {
     var currentName = window.location.pathname.substring(1);
     if (
@@ -55,7 +44,6 @@ $(function () {
     if (name === "index") {
       showTop(duration);
       $(".link-underline").removeClass("active");
-      fadeInOutPhilosophy();
     } else {
       showContent(name, duration);
       $(".link-underline").removeClass("active");
@@ -121,18 +109,39 @@ $(function () {
   $(".contact-confirm-dialog").hide();
   });
 
-  $(function () {
-    function webStorage() {
+$(function () {
+  async function webStorage() {
     if (sessionStorage.getItem('access')) {
       $(".loading").addClass('is-active');
+      await fadeInOutPhilosophy();
     } else {
       sessionStorage.setItem('access', 'true');
       $(".loading-animation").addClass('is-active');
-      setTimeout(function () {
-        $(".loading").addClass('is-active');
-        $(".loading-animation").removeClass('is-active');
-      }, 3000);
+      await delay(3000);
+      $(".loading").addClass('is-active');
+      $(".loading-animation").removeClass('is-active');
+      await fadeInOutPhilosophy();
     }
   }
+
+  function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  function fadeInOutPhilosophy() {
+    return new Promise(resolve => {
+      $(".philosophy-h").fadeIn(2000, function () {
+        $(".philosophy-p").fadeIn(2000, function () {
+          $(".corporate-philosophy").fadeOut(2000, function () {
+            $(".logo-wrap").css("display", "block");
+            $(".logo-wrap").animate({ opacity: 1 }, 2000, function () {
+              resolve();
+            });
+          });
+        });
+      });
+    });
+  }
+
   webStorage();
 });
