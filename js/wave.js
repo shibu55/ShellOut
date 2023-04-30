@@ -15,7 +15,7 @@ $(document).ready(function() {
   const waves = [
     {
       // yellow
-      y: canvas.height * 0.5 - 60,
+      y: canvas.height * 1/devicePixelRatio - 40,
       length: 0.005,
       amplitude: 30,
       frequency: 0.05,
@@ -23,7 +23,7 @@ $(document).ready(function() {
     },
     {
       // orange
-      y: canvas.height * 0.5 - 50,
+      y: canvas.height * 1/devicePixelRatio - 50,
       length: 0.007,
       amplitude: 25,
       frequency: 0.1,
