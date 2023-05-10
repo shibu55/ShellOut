@@ -329,6 +329,23 @@ header {
   text-align: center;
 }
 
+.prev-button,
+.next-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #683a1b;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.next-button {
+  margin-left: 10px;
+}
 /****************************************************/
 /*contact*/
 .contact-form {
