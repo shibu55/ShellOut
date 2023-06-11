@@ -74,6 +74,10 @@ header {
   cursor: pointer;
 }
 
+.recruit-logo {
+  width: 100%;
+}
+
 /****************************************************/
 .close-area {
   position: absolute;
@@ -104,7 +108,7 @@ header {
   width: 750px;
   height: auto;
   max-height: calc(100% - 150px);
-  padding: 15px 15px 50px 50px;
+  padding: 50px 15px 50px 15px;
   position: relative;
   overflow-y: scroll;
   background: rgba(255, 255, 255, 0.05);
@@ -338,19 +342,35 @@ header {
   letter-spacing: 0.05em;
   text-align: center;
 }
+.recruit-description {
+  display: block;
+  height: 220px;
+  margin-top: 0px;
+  color: #683a1b;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
 
 .prev-button,
 .next-button {
   display: inline-block;
-  margin-top: 30px;
-  padding: 10px 20px;
+  margin-top: 10px;
+  padding: 5px 10px;
   background-color: #683a1b;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: bold;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 
 .next-button {
@@ -535,7 +555,7 @@ input[type="checkbox"]:checked + .contact-agree::after {
 .return-top {
   position: sticky;
   width: 30px;
-  height: 30px;
+  height: 0px;
   top: 0px;
   right: 0px;
   margin: 0 0 0 auto;
