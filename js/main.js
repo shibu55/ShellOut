@@ -1,5 +1,5 @@
 $(function () {
-  var MENU_NAMES = ["about", "office", "recruit", "contact"];
+  var MENU_NAMES = ["about", "office", "partnership", "recruit", "contact"];
   var NENU_CLASSES = MENU_NAMES.map(function (name) {
     return "." + name;
   });
