@@ -10,9 +10,9 @@
   .menu-content {
     width: 100%;
     height: auto;
-    max-height: calc(80% - 30px);
+    max-height: calc(100%);
     margin-top: 100px;
-    padding: 20px 5px 20px 5px;
+    padding: 20px 5px 50px 5px;
     border-color: rgba(255, 255, 255, 0.5);
   }
   
