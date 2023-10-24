@@ -151,4 +151,9 @@
   
 .mobile-small {
   font-size: 0.7rem;
+  margin-top: 10px;
+}
+
+.mobile-xsmall {
+  font-size: 0.6rem;
 }
