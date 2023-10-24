@@ -79,6 +79,27 @@ header {
   width: 100%;
 }
 
+.miyu-img {
+  width: 50%;
+}
+
+.center {
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+}
+
+.miyu-description {
+  display: block;
+  height: 200px;
+  margin-top: 0px;
+  color: #683a1b;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
 /****************************************************/
 .close-area {
   position: absolute;
