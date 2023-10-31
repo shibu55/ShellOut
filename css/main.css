@@ -50,6 +50,8 @@ ul {
 .about,
 .office,
 .partnership,
+.miyu,
+.drops,
 .recruit,
 .contact {
   display: none;
@@ -81,6 +83,15 @@ header {
 
 .miyu-img {
   width: 50%;
+}
+
+.partnerships {
+  display: block;
+  margin-top: 10px;
+  color: #683a1b;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
 }
 
 .center {
@@ -130,7 +141,7 @@ header {
   width: 750px;
   height: auto;
   max-height: calc(100% - 150px);
-  padding: 50px 15px 50px 15px;
+  padding: 50px 15px 70px 15px;
   position: relative;
   overflow-y: scroll;
   background: rgba(255, 255, 255, 0.05);
@@ -782,4 +793,8 @@ footer {
   top: 0;
   left: 0;
   z-index: -1; /* 他の要素よりも下に表示するためにz-indexを設定 */
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }

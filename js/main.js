@@ -5,11 +5,16 @@ $(function () {
   });
   var FADE_DURATION = 250;
   var cancelFlag = 0;
+  var PARTNERSHIP_NAMES = ["miyu", "drops"]
+  var PARTNERSHIP_CLASSES = PARTNERSHIP_NAMES.map(function (name) {
+    return "." + name;
+  });
 
   function showContent(name, duration) {
     $(".index, .content").fadeOut(duration);
     setTimeout(function () {
       $(NENU_CLASSES.join(",")).hide();
+      $(PARTNERSHIP_CLASSES.join(",")).hide();
       $(".content").scrollTop();
       $(".content").addClass("menu-content");
       var names = [".header-logo", ".footer-list", ".menu-content", "." + name];
@@ -21,6 +26,7 @@ $(function () {
     $(".header-logo, .footer-list, .content").fadeOut(duration);
     setTimeout(function () {
       $(NENU_CLASSES.concat([".menu-content"]).join(",")).hide();
+      $(PARTNERSHIP_CLASSES.join(",")).hide();
       $(".content").removeClass("menu-content");
       $(".content, .index").fadeIn(duration);
     }, duration);
@@ -44,10 +50,12 @@ $(function () {
     if (name === "index") {
       showTop(duration);
       $(".link-underline").removeClass("active");
-    } else {
+    }else if (MENU_NAMES.includes(name)) {
       showContent(name, duration);
       $(".link-underline").removeClass("active");
       $(".menu-" + name + " .link-underline").addClass("active");
+    }else {
+      showContent(name, duration);
     }
     setTimeout(function () {
       cancelFlag = 0;
@@ -72,6 +80,12 @@ $(function () {
 
   MENU_NAMES.forEach(function (name) {
     $(".menu-" + name).on("click", function () {
+      navigate(name);
+    });
+  });
+
+  PARTNERSHIP_NAMES.forEach(function (name) {
+    $(".link-" + name).on("click", function () {
       navigate(name);
     });
   });
