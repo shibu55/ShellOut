@@ -174,7 +174,7 @@ $(document).ready(function () {
 <br>
 お問い合わせ<br>
 応募に関して不明な点がございましたら<br>
-<a href="https://twitter.com/mmyntee7ul21277">『公式X』</a>にDMにてお問い合わせください<br>
+<a href="https://x.com/sj_hero_miss">『公式X』</a>にDMにてお問い合わせください<br>
 <br>`;
 
   const contents = text.split('\n\n\n');
